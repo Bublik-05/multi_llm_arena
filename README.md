@@ -18,6 +18,11 @@ python -m app.cli health
 python -m app.cli models
 python -m app.cli ask llama3.2 "Explain TCP in two sentences"
 
+## in my case (with 3 models llama3.2; qwen2.5:1.5b; phi3:mini)
+python -m app.cli compare "Explain TCP in two sentences" llama3.2 qwen2.5:1.5b phi3:mini --judge phi3:mini
+
+
+
 # run the API (http://localhost:8000/docs)
 uvicorn app.main:app --reload
 
